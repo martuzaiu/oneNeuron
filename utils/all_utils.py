@@ -8,6 +8,14 @@ import os
 plt.style.use("fivethirtyeight")
 
 def prepare_data(df):
+  """separating levels and depending feature
+
+  Args:
+      df (df.DataFrame): the dataframe
+
+  Returns:
+      [tuple]: lebels and features
+  """
   X = df.drop("y", axis=1)
   y = df["y"]
   return X, y
