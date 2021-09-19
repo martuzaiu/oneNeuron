@@ -1,13 +1,14 @@
 from utils.model import Perceptron
 from utils.all_utils import prepare_data, save_plot, save_model
 import pandas as pd
+import logging
 
 
 def main(data, modelname, plotname, eta, epochs):
 
     df = pd.DataFrame(data)
 
-    print(df)
+    logging.info(df)
 
     X,y = prepare_data(df)
 
